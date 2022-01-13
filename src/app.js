@@ -5,6 +5,8 @@ import Features from "./views/Features";
 import Pricing from "./views/Pricing";
 import Stories from "./views/Stories";
 
+import "./images/";
+
 const App = () => {
   return (
     <BrowserRouter>
