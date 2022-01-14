@@ -1,3 +1,34 @@
+@use "../abstracts";
+
+:root {
+  //colors
+  --color-accent: linear-gradient(
+    to top right,
+    rgb(255, 197, 147),
+    rgb(188, 113, 152),
+    rgb(90, 119, 255)
+  );
+  --color-dark: 0, 0, 0;
+  --color-light: 255, 255, 255;
+  --color-medium: 233, 233, 233;
+
+  //font-family
+  --ff-primary: "DM Sans", sans-serif;
+
+  //font-size
+  --fs-700: 4rem;
+  --fs-600: 2.4rem;
+  --fs-500: 1.8rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.3rem;
+  --fs-200: 1.2rem;
+  @include abstracts.respondMax(abstracts.$tablet) {
+  }
+  @include abstracts.respondMax(abstracts.$mobile) {
+    --fs-700: 3.2rem;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -15,6 +46,7 @@ body {
   line-height: 1.5;
   box-sizing: border-box;
   font-size: 1.4rem;
+  font-family: var(--ff-primary);
 }
 
 img {
@@ -26,6 +58,9 @@ button,
 textarea,
 select {
   font: inherit;
+}
+button {
+  border: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

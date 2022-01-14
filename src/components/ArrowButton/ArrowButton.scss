@@ -1,0 +1,38 @@
+.ArrowButton {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  &--full {
+    width: 100%;
+  }
+  &--dark {
+    color: rgba(var(--color-dark), 1);
+    .arrow-icon {
+      stroke: rgba(var(--color-dark), 1);
+    }
+  }
+  &--light {
+    color: rgba(var(--color-light), 1);
+    .arrow-icon {
+      stroke: rgba(var(--color-light), 1);
+    }
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    &--regular {
+      .arrow-icon {
+        margin-left: 2rem;
+      }
+    }
+    &--full {
+      justify-content: space-between;
+    }
+  }
+}

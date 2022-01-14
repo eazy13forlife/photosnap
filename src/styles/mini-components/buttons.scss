@@ -1,0 +1,22 @@
+.primary-button {
+  padding: 1.2rem 2.4rem;
+  font-size: var(--fs-400);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  &--dark {
+    background-color: rgba(var(--color-dark), 1);
+    color: rgba(var(--color-light), 1);
+    &:hover {
+      background-color: rgba(var(--color-medium), 1);
+      color: rgba(var(--color-dark), 1);
+    }
+  }
+  &--light {
+    background-color: rgba(var(--color-light), 1);
+    color: rgba(var(--color-dark), 1);
+    &:hover {
+      background-color: rgba(var(--color-medium), 1);
+    }
+  }
+}
