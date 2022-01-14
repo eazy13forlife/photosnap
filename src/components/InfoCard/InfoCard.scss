@@ -1,0 +1,31 @@
+.InfoCard {
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  &__content {
+    & > * + * {
+      margin-top: 2rem;
+    }
+  }
+
+  &--dark {
+    background-color: rgba(var(--color-dark), 1);
+    color: rgba(var(--color-light), 1);
+  }
+  &--light {
+    background-color: rgba(var(--color-light), 1);
+    color: rgba(var(--color-dark), 1);
+  }
+  &__heading {
+    line-height: 4.8rem;
+    letter-spacing: 4.17px;
+    font-size: var(--fs-700);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: var(--fs-400);
+    font-weight: 400;
+    line-height: 2.5rem;
+  }
+}
