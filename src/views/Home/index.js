@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
-import StoryCard from "../../components/StoryCard/StoryCard.js";
+import StoryCard from "../../components/StoryCard/practice.js";
 import images from "../../images/";
 
 import "./index.scss";
