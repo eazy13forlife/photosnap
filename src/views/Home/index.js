@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
+import StoryCard from "../../components/StoryCard/StoryCard.js";
 import images from "../../images/";
 
 import "./index.scss";
@@ -51,6 +52,28 @@ const Home = () => {
         <img
           src={images.designedForEveryoneHomeDesktopJpg}
           className="Image__designed-everyone"
+        />
+      </div>
+      <div className="Home__stories">
+        <StoryCard
+          title="The Mountains"
+          author="John Appleseed"
+          image={images.mountainsStoriesDesktopJpg}
+        />
+        <StoryCard
+          title="Sunset Cityscapes"
+          author="Benjamin Cruz"
+          image={images.cityscapesStoriesDesktopJpg}
+        />
+        <StoryCard
+          title="18 Days Voyage"
+          author="Alexei Borodin"
+          image={images.eighteenDaysVoyageStoriesDesktopJpg}
+        />
+        <StoryCard
+          title="Architecturals"
+          author="Samantha Brooke"
+          image={images.architecturalsStoriesDesktopJpg}
         />
       </div>
     </div>
