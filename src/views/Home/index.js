@@ -2,7 +2,9 @@ import React from "react";
 
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
-import StoryCard from "../../components/StoryCard/practice.js";
+import StoryCard from "../../components/StoryCard/StoryCard.js";
+import FeatureCard from "../../components/FeatureCard/FeatureCard.js";
+
 import images from "../../images/";
 
 import "./index.scss";
@@ -11,7 +13,7 @@ const Home = () => {
   return (
     <div className="Home">
       <Header />
-      <div className="Home__create-and-share">
+      <section className="Home__create-and-share">
         <InfoCard
           className="InfoCard__create-and-share"
           theme="dark"
@@ -25,8 +27,9 @@ const Home = () => {
           src={images.createAndShareHomeDesktopJpg}
           className="Image__create-and-share"
         />
-      </div>
-      <div className="Home__beautiful-stories">
+      </section>
+
+      <section className="Home__beautiful-stories">
         <img
           src={images.beautifulStoriesHomeDesktopJpg}
           className="Image__beautiful-stories"
@@ -39,8 +42,9 @@ const Home = () => {
           buttonLink="/stories"
           buttonText="View the stories"
         />
-      </div>
-      <div className="Home__designed-everyone">
+      </section>
+
+      <section className="Home__designed-everyone">
         <InfoCard
           className="InfoCard__designed-everyone"
           theme="light"
@@ -53,8 +57,9 @@ const Home = () => {
           src={images.designedForEveryoneHomeDesktopJpg}
           className="Image__designed-everyone"
         />
-      </div>
-      <div className="Home__stories">
+      </section>
+
+      <section className="Home__stories">
         <StoryCard
           title="The Mountains"
           author="John Appleseed"
@@ -75,7 +80,25 @@ const Home = () => {
           author="Samantha Brooke"
           image={images.architecturalsStoriesDesktopJpg}
         />
-      </div>
+      </section>
+
+      <section className="features">
+        <FeatureCard
+          image={images.responsiveFeaturesDesktopSvg}
+          heading="100% Responsive"
+          text="No matter the device you're on, our site is fully responsive and stories look beautiful on any screen."
+        />
+        <FeatureCard
+          image={images.noLimitFeaturesDesktopSvg}
+          heading="No Photo Upload Limit"
+          text="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+        />
+        <FeatureCard
+          image={images.embedFeaturesDesktopSvg}
+          heading="Available to embed"
+          text="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more."
+        />
+      </section>
     </div>
   );
 };

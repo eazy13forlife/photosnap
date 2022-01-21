@@ -83,4 +83,15 @@
       grid-template-columns: repeat(2, 50%);
     }
   }
+  .features {
+    grid-column: full-start / full-end;
+    padding: 0rem 10rem;
+    grid-row: 6/7;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 5rem;
+    grid-row-gap: 7rem;
+    margin: 10rem 0rem;
+    justify-items: center;
+  }
 }
