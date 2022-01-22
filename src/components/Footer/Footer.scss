@@ -1,0 +1,105 @@
+@use "../../styles/abstracts";
+
+.Footer {
+  background-color: rgba(var(--color-dark), 1);
+  height: 15rem;
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  grid-column-gap: 7rem;
+  grid-template-rows: 1fr 1fr;
+  @include abstracts.respondMax(abstracts.$tablet) {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 3rem;
+  }
+  &__logo-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  &__logo {
+    color: white;
+  }
+  &__nav {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    color: rgba(var(--color-light), 1);
+    margin-left: 5rem;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin-left: 0rem;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    height: 100%;
+    justify-content: space-between;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  &__nav-item {
+    @include abstracts.respondMax(abstracts.$tablet) {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+  }
+  &__nav-link {
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+  }
+  .ArrowButton {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: end;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-column: 2/3;
+    }
+  }
+  &__icons {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: end;
+    display: flex;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
+  &__icon-link {
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+    &:hover .Footer__icon {
+      filter: grayscale(0%);
+    }
+  }
+  &__icon {
+    filter: grayscale(100%);
+    transition: 300ms all;
+  }
+  &__text {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: end;
+    align-self: end;
+    font-size: var(--fs-500);
+    font-weight: 400;
+    color: rgba(var(--color-light), 0.4);
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+  &__background {
+    background-color: rgba(var(--color-dark), 1);
+  }
+}

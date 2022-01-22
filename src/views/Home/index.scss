@@ -11,7 +11,7 @@
     [center-end]
     minmax(3rem, 1fr)
     [full-end];
-  grid-column-gap: 0rem;
+  grid-column-gap: 1.5rem;
   grid-template-rows: 8rem repeat(6, min-content);
 
   .Header {
@@ -84,14 +84,22 @@
     }
   }
   .features {
-    grid-column: full-start / full-end;
-    padding: 0rem 10rem;
+    grid-column: center-start / center-end;
     grid-row: 6/7;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-column-gap: 5rem;
+    grid-column-gap: 3rem;
     grid-row-gap: 7rem;
     margin: 10rem 0rem;
     justify-items: center;
+  }
+  .Footer {
+    grid-column: center-start / center-end;
+    grid-row: 7/8;
+    margin: 2rem 0rem;
+    &__background {
+      grid-column: full-start / full-end;
+      grid-row: 7/8;
+    }
   }
 }

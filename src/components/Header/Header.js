@@ -7,7 +7,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header className="Header">
-      <PhotosnapLogo />
+      <PhotosnapLogo className="Header__logo" />
       <nav className="Header__nav">
         <ul className="Header__nav-list">
           <li className="Header__nav-item">

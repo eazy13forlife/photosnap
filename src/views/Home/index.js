@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import StoryCard from "../../components/StoryCard/StoryCard.js";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.js";
+import Footer from "../../components/Footer/Footer.js";
 
 import images from "../../images/";
 
@@ -99,6 +100,8 @@ const Home = () => {
           text="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more."
         />
       </section>
+
+      <Footer />
     </div>
   );
 };
