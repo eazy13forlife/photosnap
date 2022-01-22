@@ -84,21 +84,23 @@ const Home = () => {
       </section>
 
       <section className="features">
-        <FeatureCard
-          image={images.responsiveFeaturesDesktopSvg}
-          heading="100% Responsive"
-          text="No matter the device you're on, our site is fully responsive and stories look beautiful on any screen."
-        />
-        <FeatureCard
-          image={images.noLimitFeaturesDesktopSvg}
-          heading="No Photo Upload Limit"
-          text="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
-        />
-        <FeatureCard
-          image={images.embedFeaturesDesktopSvg}
-          heading="Available to embed"
-          text="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more."
-        />
+        <div className="features__container container">
+          <FeatureCard
+            image={images.responsiveFeaturesDesktopSvg}
+            heading="100% Responsive"
+            text="No matter the device you're on, our site is fully responsive and stories look beautiful on any screen."
+          />
+          <FeatureCard
+            image={images.noLimitFeaturesDesktopSvg}
+            heading="No Photo Upload Limit"
+            text="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+          />
+          <FeatureCard
+            image={images.embedFeaturesDesktopSvg}
+            heading="Available to embed"
+            text="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more."
+          />
+        </div>
       </section>
 
       <Footer />

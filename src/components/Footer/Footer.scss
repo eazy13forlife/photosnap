@@ -1,17 +1,18 @@
 @use "../../styles/abstracts";
-
 .Footer {
   background-color: rgba(var(--color-dark), 1);
-  height: 15rem;
-  display: grid;
-  grid-template-columns: min-content 1fr max-content;
-  grid-column-gap: 7rem;
-  grid-template-rows: 1fr 1fr;
-  @include abstracts.respondMax(abstracts.$tablet) {
-    grid-template-columns: 1fr max-content;
-    grid-template-rows: repeat(2, min-content) 1fr;
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 3rem;
+  padding: 5rem 0rem;
+  &__container {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    grid-column-gap: 7rem;
+    grid-template-rows: 1fr 1fr;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-template-columns: 1fr max-content;
+      grid-template-rows: repeat(2, min-content) 7rem;
+      grid-row-gap: 1.5rem;
+      grid-column-gap: 3rem;
+    }
   }
   &__logo-container {
     grid-column: 1/2;
@@ -98,8 +99,5 @@
       grid-column: 2/3;
       grid-row: 3/4;
     }
-  }
-  &__background {
-    background-color: rgba(var(--color-dark), 1);
   }
 }

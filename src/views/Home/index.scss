@@ -2,6 +2,7 @@
 
 .Home {
   min-height: 100vh;
+  /*
   display: grid;
   grid-template-columns:
     [full-start]
@@ -13,15 +14,13 @@
     [full-end];
   grid-column-gap: 1.5rem;
   grid-template-rows: 8rem repeat(6, min-content);
-
+*/
   .Header {
     grid-column: full-start/full-end;
     grid-row: 1/2;
   }
 
   &__create-and-share {
-    grid-column: full-start / full-end;
-    grid-row: 2/3;
     display: grid;
     grid-template-columns: 55rem 1fr;
     @include abstracts.respondMax(800px) {
@@ -39,8 +38,6 @@
   }
 
   &__beautiful-stories {
-    grid-column: full-start/full-end;
-    grid-row: 3/4;
     display: grid;
     grid-template-columns: 1fr 55rem;
     @include abstracts.respondMax(800px) {
@@ -57,8 +54,6 @@
     grid-column: 2/3;
   }
   &__designed-everyone {
-    grid-column: full-start/full-end;
-    grid-row: 4/5;
     display: grid;
     grid-template-columns: 55rem 1fr;
     @include abstracts.respondMax(800px) {
@@ -75,8 +70,6 @@
     }
   }
   &__stories {
-    grid-column: full-start / full-end;
-    grid-row: 5/6;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     @include abstracts.respondMax(900px) {
@@ -84,18 +77,16 @@
     }
   }
   .features {
-    grid-column: center-start / center-end;
-    grid-row: 6/7;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-column-gap: 3rem;
-    grid-row-gap: 7rem;
-    margin: 10rem 0rem;
-    justify-items: center;
+    padding: 10rem 0rem;
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-column-gap: 7rem;
+      grid-row-gap: 7rem;
+      justify-items: center;
+    }
   }
   .Footer {
-    grid-column: center-start / center-end;
-    grid-row: 7/8;
     margin: 2rem 0rem;
     &__background {
       grid-column: full-start / full-end;

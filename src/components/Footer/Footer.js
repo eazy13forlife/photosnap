@@ -8,9 +8,8 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <>
-      <div className="Footer__background"></div>
-      <footer className="Footer">
+    <footer className="Footer">
+      <div className="Footer__container container">
         <figure className="Footer__logo-container">
           <Logo className="Footer__logo" />
         </figure>
@@ -77,8 +76,8 @@ const Footer = () => {
         </div>
         <ArrowButton text="get an invite" color="light" size="regular" />
         <p className="Footer__text">Copyright 2021. All rights reserved</p>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 
