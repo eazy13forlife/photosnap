@@ -8,7 +8,8 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__logo {
+  &__logo-container {
+    margin-right: 1.5rem;
   }
   &__nav-list {
     display: flex;
@@ -29,5 +30,8 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: rgba(var(--color-dark), 1);
+  }
+  &__button {
+    margin-left: 1.5rem;
   }
 }

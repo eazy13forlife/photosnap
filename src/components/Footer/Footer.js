@@ -75,7 +75,7 @@ const Footer = () => {
           </Link>
         </div>
         <ArrowButton text="get an invite" color="light" size="regular" />
-        <p className="Footer__text">Copyright 2021. All rights reserved</p>
+        <p className="Footer__text">Copyright 2022. All rights reserved</p>
       </div>
     </footer>
   );

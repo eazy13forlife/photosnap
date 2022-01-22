@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import images from "../../images";
 import { ReactComponent as PhotosnapLogo } from "../../images/shared/desktop/logo.svg";
 
 import "./Header.scss";
@@ -8,7 +9,13 @@ const Header = () => {
   return (
     <header className="Header">
       <div className="Header__container container">
-        <PhotosnapLogo className="Header__logo" />
+        <figure className="Header__logo-container">
+          <img
+            src={images.logoSharedDesktopSvg}
+            alt=""
+            className="Header__logo"
+          />
+        </figure>
         <nav className="Header__nav">
           <ul className="Header__nav-list">
             <li className="Header__nav-item">
