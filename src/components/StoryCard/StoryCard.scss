@@ -59,9 +59,16 @@
     font-weight: 700;
     line-height: 2.5rem;
   }
-  &__author {
+  &__author,
+  &__date {
     font-size: var(--fs-300);
     font-weight: 400;
+  }
+  &__author {
+    margin-top: 3px;
+  }
+  &__date {
+    margin-bottom: 0.5rem;
   }
   .ArrowButton {
     margin-top: 1.5rem;

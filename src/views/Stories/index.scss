@@ -1,0 +1,6 @@
+.Stories {
+  &__all {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
