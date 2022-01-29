@@ -1,0 +1,11 @@
+.Features {
+  &__hero {
+    display: flex;
+    .InfoCard {
+      flex: 1 0 54rem;
+    }
+    &-image-container {
+      flex: 1 0 0;
+    }
+  }
+}

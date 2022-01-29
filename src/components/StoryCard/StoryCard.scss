@@ -3,9 +3,6 @@
   position: relative;
   z-index: 3;
   transition: transform 400ms;
-  &__link {
-    text-decoration: none;
-  }
   &::before {
     position: absolute;
     content: "";

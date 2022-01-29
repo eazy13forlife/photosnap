@@ -9,6 +9,7 @@ const InfoCard = ({
   theme,
   heading,
   text,
+  hasButton,
   buttonText,
   buttonLink,
 }) => {
@@ -17,12 +18,14 @@ const InfoCard = ({
       <div className="InfoCard__content">
         <h2 className="InfoCard__heading">{heading}</h2>
         <p className="InfoCard__text">{text}</p>
-        <ArrowButton
-          text={buttonText}
-          link={buttonLink}
-          size="regular"
-          color={theme === "dark" ? "light" : "dark"}
-        />
+        {hasButton ? (
+          <ArrowButton
+            text={buttonText}
+            link={buttonLink}
+            size="regular"
+            color={theme === "dark" ? "light" : "dark"}
+          />
+        ) : null}
       </div>
     </div>
   );
