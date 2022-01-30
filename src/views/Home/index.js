@@ -87,7 +87,7 @@ const Home = () => {
       </section>
 
       <section className="features">
-        <div className="features__container container">
+        <div className="features__grid container">
           <FeatureCard
             image={images.responsiveFeaturesDesktopSvg}
             heading="100% Responsive"

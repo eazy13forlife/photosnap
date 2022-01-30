@@ -1,0 +1,30 @@
+@use "../../styles/abstracts";
+
+.TwoColumnCard {
+  background-image: url("../../images/shared/desktop/bg-beta.jpg");
+  background-size: cover;
+  padding: 7rem 0rem;
+  color: rgba(var(--color-light), 1);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include abstracts.respondMax(730px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__header {
+    flex: 0 0 40rem;
+    font-size: var(--fs-700);
+    font-weight: 500;
+    line-height: 4.8rem;
+    letter-spacing: 4.17px;
+    text-transform: uppercase;
+    flex: 0 0 40rem;
+    @include abstracts.respondMax(730px) {
+      flex: 0 0 0rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

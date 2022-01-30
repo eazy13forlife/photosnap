@@ -4,6 +4,8 @@ import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import Footer from "../../components/Footer/Footer.js";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.js";
+import TwoColumnCard from "../../components/TwoColumnCard/TwoColumnCard.js";
+import ArrowButton from "../../components/ArrowButton/ArrowButton.js";
 import images from "../../images/";
 import "./index.scss";
 
@@ -26,8 +28,8 @@ const Features = () => {
             />
           </figure>
         </div>
-        <div className="Feature__features">
-          <div className="features__container container">
+        <div className="Features__features">
+          <div className="features__grid container">
             <FeatureCard
               image={images.responsiveFeaturesDesktopSvg}
               heading="100% Responsive"
@@ -60,6 +62,9 @@ const Features = () => {
             />
           </div>
         </div>
+        <section className="Features__beta">
+          <TwoColumnCard text="We're in beta. Get your invite today!" cta={}/>
+        </section>
       </main>
       <Footer />
     </div>

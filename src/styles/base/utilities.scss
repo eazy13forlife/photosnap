@@ -1,9 +1,22 @@
+@use "../abstracts";
+
 .container {
   max-width: 105rem;
   padding: 0rem 5rem;
   margin: 0 auto;
   height: 100%;
+  @include abstracts.respondMax(abstracts.$mobile) {
+    padding: 0rem 2rem;
+  }
 }
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 7rem;
+  grid-row-gap: 7rem;
+  justify-items: center;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
