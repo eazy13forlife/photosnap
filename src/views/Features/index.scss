@@ -4,6 +4,7 @@
   &__hero {
     display: flex;
     .InfoCard {
+      position: relative;
       flex: 1 0 54rem;
     }
     &-image-container {

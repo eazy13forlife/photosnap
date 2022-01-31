@@ -19,7 +19,6 @@ const Features = () => {
             theme="dark"
             heading="features"
             text="We make sure all of our features are designed to be loved by every aspiring and even professional photographers who wanted to share their stories."
-            hasButton={false}
           />
           <figure className="Features__hero-image-container">
             <img
@@ -63,7 +62,17 @@ const Features = () => {
           </div>
         </div>
         <section className="Features__beta">
-          <TwoColumnCard text="We're in beta. Get your invite today!" cta={}/>
+          <TwoColumnCard
+            text="We're in beta. Get your invite today!"
+            cta={
+              <ArrowButton
+                text="Get an invite"
+                color="light"
+                size="regular"
+                link=""
+              />
+            }
+          />
         </section>
       </main>
       <Footer />

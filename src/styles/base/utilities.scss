@@ -17,6 +17,51 @@
   justify-items: center;
 }
 
+//parent div that holds our .child-top-border div
+.parent-top-border {
+  padding: 0rem 8rem;
+}
+
+//create empty outer div around main content and add this class to add a border to very top of section
+.top-border-container {
+  padding: 10rem 0rem;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 5px;
+    background-image: var(--color-accent);
+  }
+}
+//parent div that holds our .child-left-border div
+.parent-left-border {
+  display: flex;
+  align-items: center;
+  padding: 10rem 0rem;
+}
+
+//create empty outer div around main content and add this class to add a border to very left of section
+.left-border-container {
+  padding: 0rem 8rem;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-image: var(--color-accent);
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

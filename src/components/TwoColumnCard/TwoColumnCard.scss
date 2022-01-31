@@ -1,14 +1,32 @@
 @use "../../styles/abstracts";
 
 .TwoColumnCard {
+  position: relative;
   background-image: url("../../images/shared/desktop/bg-beta.jpg");
   background-size: cover;
   padding: 7rem 0rem;
   color: rgba(var(--color-light), 1);
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-image: var(--color-accent);
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 30rem;
+      height: 5px;
+      background-image: var(--color-accent);
+    }
     @include abstracts.respondMax(730px) {
       flex-direction: column;
       align-items: flex-start;
