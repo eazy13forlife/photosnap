@@ -31,7 +31,7 @@ const Pricing = () => {
 
         <section className="Pricing__prices">
           <div className="Pricing__container container">
-            <div className="Slider">
+            <div className="Slider" tabIndex="0">
               <span className="Slider__text">Monthly</span>
               <div className="Slider__floor">
                 <input

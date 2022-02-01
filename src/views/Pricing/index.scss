@@ -43,7 +43,6 @@
     left: 0;
     border-radius: 1rem;
     background-color: rgba(var(--color-dark), 0.2);
-    transition: background-color 300ms ease-in;
   }
   &__circle {
     position: absolute;
@@ -54,6 +53,6 @@
     width: 2rem;
     background-color: rgba(var(--color-dark), 1);
     border-radius: 50%;
-    transition: all 200ms ease-out;
+    transition: left 300ms ease-out, transform 300ms ease-out;
   }
 }
