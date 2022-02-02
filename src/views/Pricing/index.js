@@ -2,12 +2,35 @@ import React, { useState, useEffect } from "react";
 
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
+import PricingCard from "../../components/PricingCard/PricingCard.js";
 import images from "../../images";
 
 import "./index.scss";
 
+const prices = {
+  units: {
+    monthly: "month",
+    yearly: "year",
+  },
+  basic: {
+    monthly: 19,
+    yearly: 190,
+  },
+  pro: {
+    monthly: 39,
+    yearly: 390,
+  },
+  business: {
+    monthly: 99,
+    yearly: 990,
+  },
+};
 const Pricing = () => {
   const [planLength, setPlanLength] = useState("monthly");
+
+  const getPriceAndLength = (plan, length) => {
+    return `${prices[plan][length]}/${prices["units"][length]}`;
+  };
 
   return (
     <div className="Pricing">
@@ -23,7 +46,7 @@ const Pricing = () => {
           <figure className="Pricing__hero-image-container">
             <img
               src={images.heroPricingDesktopJpg}
-              alt=""
+              alt="Man taking a picture"
               className="Pricing__hero-image"
             />
           </figure>
@@ -31,19 +54,52 @@ const Pricing = () => {
 
         <section className="Pricing__prices">
           <div className="Pricing__container container">
-            <div className="Slider" tabIndex="0">
-              <span className="Slider__text">Monthly</span>
-              <div className="Slider__floor">
-                <input
-                  type="checkbox"
-                  name="length"
-                  className="Slider__checkbox"
-                  id="length"
-                />
-                <div className="Slider__background"></div>
-                <label htmlFor="length" className="Slider__circle"></label>
-              </div>
-              <span className="Slider__text">Yearly</span>
+            <p className="sr-only">Select plan length.</p>
+            <div className="Slider" tabIndex="0" htmlFor="length">
+              <span className="Slider__text" aria-hidden="true">
+                Monthly
+              </span>
+              <button
+                className="Slider__floor"
+                aria-description={`Toggles between monthly and yearly. Currently ${planLength}`}
+                data-length={planLength}
+                type="button"
+                onClick={() => {
+                  if (planLength === "monthly") {
+                    setPlanLength("yearly");
+                  } else {
+                    setPlanLength("monthly");
+                  }
+                }}
+              >
+                <span className="Slider__background"></span>
+                <span className="Slider__circle"></span>
+              </button>
+              <span className="Slider__text" aria-hidden="true">
+                Yearly
+              </span>
+            </div>
+
+            <div className="Pricing__pricing-cards">
+              <PricingCard
+                theme="light"
+                header="basic"
+                text="Includes basic usage of our platform. Recommended for new and aspiring photographers."
+                priceAndLength={getPriceAndLength("basic", planLength)}
+              />
+              <PricingCard
+                theme="dark"
+                header="pro"
+                text="More advanced features available. Recommended fo photography veterans and professionals."
+                priceAndLength={getPriceAndLength("pro", planLength)}
+                highlight={true}
+              />
+              <PricingCard
+                theme="light"
+                header="business"
+                text="Additional features available such as more detailed metrics. Recommended for business owners"
+                priceAndLength={getPriceAndLength("business", planLength)}
+              />
             </div>
           </div>
         </section>
@@ -53,3 +109,20 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
+/*
+  <label className="Slider" tabIndex="0" htmlFor="length">
+              <span className="Slider__text">Monthly</span>
+              <input
+                type="checkbox"
+                name="length"
+                className="Slider__checkbox sr-only"
+                id="length"
+              />
+              <span className="Slider__floor">
+                <span className="Slider__background"></span>
+                <span className="Slider__circle"></span>
+              </span>
+              <span className="Slider__text">Yearly</span>
+            </label>
+            */

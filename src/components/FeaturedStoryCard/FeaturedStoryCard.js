@@ -29,7 +29,7 @@ const FeaturedStoryCardStoryCard = ({
               <span className="FeaturedStoryCard__author">{` by ${author}`}</span>
             </p>
           </header>
-          <p className="FeaturedStoryCard__text">{text}</p>
+          <p className="FeaturedStoryCard__text body-text">{text}</p>
           <ArrowButton
             size="regular"
             text="read the story"

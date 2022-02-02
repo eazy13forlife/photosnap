@@ -55,7 +55,7 @@ const InfoCard = ({
       <div className={`${renderContainerBorderClass()}`}>
         <div className="InfoCard__content">
           <h2 className="InfoCard__heading">{heading}</h2>
-          <p className="InfoCard__text">{text}</p>
+          <p className="body-text">{text}</p>
           {buttonText ? (
             <ArrowButton
               text={buttonText}

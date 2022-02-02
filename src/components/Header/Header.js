@@ -35,10 +35,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Link
-          to=""
-          className="Header__button primary-button primary-button--dark"
-        >
+        <Link className="Header__button primary-button primary-button--dark">
           Get an invite
         </Link>
       </div>

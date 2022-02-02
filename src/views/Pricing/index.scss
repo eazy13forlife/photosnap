@@ -8,30 +8,57 @@
   &__hero-image-container {
     flex: 1 0 0;
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__prices {
+    padding: 10rem 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__pricing-cards {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-column-gap: 2.5rem;
+    grid-template-rows: auto;
+  }
 }
 
+// version with button
 .Slider {
-  display: flex;
+  display: inline-flex;
+  height: 2rem;
+  cursor: pointer;
   & > * + * {
     margin-left: 1rem;
   }
+
+  &__floor {
+    &[data-length="yearly"] {
+      .Slider__circle {
+        left: 100%;
+        transform: translatex(-100%);
+        background-color: rgba(var(--color-light), 1);
+      }
+      .Slider__background {
+        background-color: rgba(var(--color-dark), 1);
+      }
+    }
+    &:hover {
+      outline: 2px solid blue;
+    }
+  }
+
   &__floor {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     width: 4.6rem;
     height: 2rem;
     border-radius: 1rem;
-  }
-  &__checkbox {
-    display: none;
-    &:checked ~ .Slider__circle {
-      left: 100%;
-      transform: translatex(-100%);
-      background-color: rgba(var(--color-light), 1);
-    }
-    &:checked ~ .Slider__background {
-      background-color: rgba(var(--color-dark), 1);
-    }
   }
   &__background {
     position: absolute;
@@ -47,6 +74,7 @@
   &__circle {
     position: absolute;
     z-index: 2;
+    top: 0;
     left: 0;
     display: block;
     height: 2rem;
@@ -56,3 +84,59 @@
     transition: left 300ms ease-out, transform 300ms ease-out;
   }
 }
+
+/* version with label
+.Slider {
+  display: inline-flex;
+  width: auto;
+  height: 2rem;
+  cursor: pointer;
+  & > * + * {
+    margin-left: 1rem;
+  }
+
+  &__checkbox {
+    &:checked + .Slider__floor .Slider__circle {
+      left: 100%;
+      transform: translatex(-100%);
+      background-color: rgba(var(--color-light), 1);
+    }
+    &:checked + .Slider__floor .Slider__background {
+      background-color: rgba(var(--color-dark), 1);
+    }
+    &:focus-visible + .Slider__floor {
+      outline: 2px solid blue;
+    }
+  }
+  &__floor {
+    position: relative;
+    z-index: 3;
+    width: 4.6rem;
+    height: 2rem;
+    border-radius: 1rem;
+  }
+  &__background {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    background-color: rgba(var(--color-dark), 0.2);
+  }
+  &__circle {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgba(var(--color-dark), 1);
+    border-radius: 50%;
+    transition: left 300ms ease-out, transform 300ms ease-out;
+  }
+}
+*/

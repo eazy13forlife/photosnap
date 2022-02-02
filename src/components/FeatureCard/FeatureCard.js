@@ -9,7 +9,7 @@ const FeatureCard = ({ image, heading, text }) => {
         <img src={image} alt="" className="FeatureCard__image" />
       </figure>
       <h2 className="FeatureCard__heading">{heading}</h2>
-      <p className="FeatureCard__text">{text}</p>
+      <p className="FeatureCard__text body-text">{text}</p>
     </div>
   );
 };
