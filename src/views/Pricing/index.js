@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import PricingCard from "../../components/PricingCard/PricingCard.js";
+import FeaturesStrip from "../../components/FeaturesStrip/FeaturesStrip.js";
 import images from "../../images";
 
 import "./index.scss";
@@ -103,6 +104,28 @@ const Pricing = () => {
             </div>
           </div>
         </section>
+        <section className="Pricing__compare">
+          <div className="Pricing__compare-container container">
+            <h2 className="Pricing__compare-heading section-heading">
+              Compare
+            </h2>
+            <div className="Pricing__compare-table">
+              <FeaturesStrip
+                feature="The Features"
+                setup={true}
+                plans={["basic", "pro", "business"]}
+              />
+              <FeaturesStrip
+                feature="Unlimited Story Posting"
+                plans={[
+                  { type: "basic", included: true },
+                  { type: "pro", included: true },
+                  { type: "business", included: true },
+                ]}
+              />
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
@@ -125,4 +148,20 @@ export default Pricing;
               </span>
               <span className="Slider__text">Yearly</span>
             </label>
+
+
+                     <div className="FeaturesStrip">
+                <h3 className="FeaturesStrip__heading">The Features</h3>
+                <div className="FeaturesStrip__plans">
+                  <div className="FeaturesStrip__plan">
+                    <h3 className="FeaturesStrip__heading">Basic</h3>
+                  </div>
+                  <div className="FeaturesStrip__plan">
+                    <h3 className="FeaturesStrip__heading">Pro</h3>
+                  </div>
+                  <div className="FeaturesStrip__plan">
+                    <h3 className="FeaturesStrip__heading">Business</h3>
+                  </div>
+                </div>
+              </div>
             */

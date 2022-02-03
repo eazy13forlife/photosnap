@@ -12,3 +12,23 @@ $mobile: 375px;
     @content;
   }
 }
+
+@mixin borderHorizontal($width) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: 5px;
+  background-image: var(--color-accent);
+}
+
+@mixin borderVertical($height) {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: $height;
+  background-image: var(--color-accent);
+}

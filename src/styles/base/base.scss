@@ -22,6 +22,7 @@
   --fs-400: 1.5rem;
   --fs-300: 1.3rem;
   --fs-200: 1.2rem;
+  --fs-100: 1rem;
   @include abstracts.respondMax(abstracts.$tablet) {
   }
   @include abstracts.respondMax(abstracts.$mobile) {

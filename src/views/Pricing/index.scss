@@ -26,6 +26,19 @@
     grid-column-gap: 2.5rem;
     grid-template-rows: auto;
   }
+  &__compare {
+    padding: 10rem 0rem;
+  }
+  &__compare-table {
+    width: 70%;
+    margin: 5rem auto;
+    .FeaturesStrip:first-child {
+      border-bottom: 2px solid rgba(var(--color-dark), 1);
+    }
+  }
+  &__compare-heading {
+    text-align: center;
+  }
 }
 
 // version with button
