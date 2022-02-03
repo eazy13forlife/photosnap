@@ -4,6 +4,8 @@ import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import PricingCard from "../../components/PricingCard/PricingCard.js";
 import FeaturesStrip from "../../components/FeaturesStrip/FeaturesStrip.js";
+import Beta from "../../components/Beta/Beta.js";
+import Footer from "../../components/Footer/Footer.js";
 import images from "../../images";
 
 import "./index.scss";
@@ -80,7 +82,6 @@ const Pricing = () => {
                 Yearly
               </span>
             </div>
-
             <div className="Pricing__pricing-cards">
               <PricingCard
                 theme="light"
@@ -104,6 +105,7 @@ const Pricing = () => {
             </div>
           </div>
         </section>
+
         <section className="Pricing__compare">
           <div className="Pricing__compare-container container">
             <h2 className="Pricing__compare-heading section-heading">
@@ -123,9 +125,71 @@ const Pricing = () => {
                   { type: "business", included: true },
                 ]}
               />
+              <FeaturesStrip
+                feature="Unlimited Photo Upload"
+                plans={[
+                  { type: "basic", included: true },
+                  { type: "pro", included: true },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Embedded Custom Content"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: true },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Customized Metadata"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: true },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Advanced Metrics"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: false },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Photo Downloads"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: false },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Search Engine Indexing"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: false },
+                  { type: "business", included: true },
+                ]}
+              />
+              <FeaturesStrip
+                feature="Custom Analytics"
+                plans={[
+                  { type: "basic", included: false },
+                  { type: "pro", included: false },
+                  { type: "business", included: true },
+                ]}
+              />
             </div>
           </div>
         </section>
+
+        <section className="Pricing__beta">
+          <Beta />
+        </section>
+
+        <Footer />
       </main>
     </div>
   );

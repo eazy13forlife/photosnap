@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
 import Footer from "../../components/Footer/Footer.js";
 import FeatureCard from "../../components/FeatureCard/FeatureCard.js";
-import TwoColumnCard from "../../components/TwoColumnCard/TwoColumnCard.js";
+import Beta from "../../components/Beta/Beta.js";
 import ArrowButton from "../../components/ArrowButton/ArrowButton.js";
 import images from "../../images/";
 import "./index.scss";
@@ -63,17 +63,7 @@ const Features = () => {
           </div>
         </div>
         <section className="Features__beta">
-          <TwoColumnCard
-            text="We're in beta. Get your invite today!"
-            cta={
-              <ArrowButton
-                text="Get an invite"
-                color="light"
-                size="regular"
-                link=""
-              />
-            }
-          />
+          <Beta />
         </section>
       </main>
       <Footer />
