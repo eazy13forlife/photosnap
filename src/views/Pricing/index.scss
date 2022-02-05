@@ -2,11 +2,14 @@
   &__hero {
     display: flex;
   }
-  .InfoCard {
-    flex: 0 0 55rem;
+  &__pricing {
+    flex: 1 0 55rem;
   }
   &__hero-image-container {
     flex: 1 0 0;
+  }
+  &__image {
+    width: 100%;
   }
   &__container {
     display: flex;

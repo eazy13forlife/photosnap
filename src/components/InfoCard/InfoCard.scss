@@ -6,6 +6,9 @@
     padding: 10rem 8rem;
     display: flex;
     align-items: center;
+    @include abstracts.respondMax(abstracts.$mobile-large) {
+      padding: 10rem 3rem;
+    }
   }
   &__content {
     & > * + * {

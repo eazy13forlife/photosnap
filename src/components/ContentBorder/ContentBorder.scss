@@ -1,0 +1,30 @@
+@use "../../styles/abstracts";
+
+.ContentBorder {
+  &--horizontal {
+  }
+  &--vertical {
+  }
+  &__child-wrapper {
+    &--horizontal {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::after {
+        @include abstracts.borderHorizontal(45%);
+      }
+    }
+    &--vertical {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::after {
+        @include abstracts.borderVertical(100%);
+      }
+    }
+  }
+}

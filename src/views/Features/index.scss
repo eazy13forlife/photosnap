@@ -4,10 +4,10 @@
   &__hero {
     display: flex;
     height: 49rem;
-    .InfoCard {
-      position: relative;
-      flex: 0 0 60rem;
-    }
+  }
+  &__InfoCard {
+    position: relative;
+    flex: 0 0 60rem;
   }
   &__hero-image-container {
     background-image: url("../../images/features/desktop/hero.jpg");

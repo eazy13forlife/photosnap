@@ -16,6 +16,7 @@ const Features = () => {
       <main className="Features__main">
         <div className="Features__hero">
           <InfoCard
+            className="Features__InfoCard"
             theme="dark"
             heading="features"
             text="We make sure all of our features are designed to be loved by every aspiring and even professional photographers who wanted to share their stories."

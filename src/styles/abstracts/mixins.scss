@@ -1,4 +1,8 @@
+$desktop-small: 900px;
+$tablet-large: 800px;
 $tablet: 768px;
+$tablet-small: 700px;
+$mobile-large: 450px;
 $mobile: 375px;
 
 @mixin respondMax($size) {
@@ -14,21 +18,37 @@ $mobile: 375px;
 }
 
 @mixin borderHorizontal($width) {
+  /*
+  @if $side==left {
+    top: 0;
+  }
+  @if $side==right {
+    right: 0;
+  }
+  */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: $width;
-  height: 5px;
+  height: 8px;
   background-image: var(--color-accent);
 }
 
 @mixin borderVertical($height) {
+  /*
+  @if $side==top {
+    top: 0;
+  }
+  @if $side==bottom {
+    bottom: 0;
+  }
+  */
   position: absolute;
   content: "";
   left: 0;
   top: 0;
-  width: 5px;
+  width: 8px;
   height: $height;
   background-image: var(--color-accent);
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ArrowButton from "../../components/ArrowButton/ArrowButton.js";
 import "./FeaturedStoryCard.scss";
@@ -10,13 +10,10 @@ const FeaturedStoryCardStoryCard = ({
   text,
   backgroundImage,
 }) => {
-  return (
-    <div
-      className="FeaturedStoryCard"
-      style={{
-        backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
-      }}
-    >
+  const [isMobile, setIsMobile] = useState(window.outerWidth <= 368);
+
+  const renderMainContent = () => {
+    return (
       <div className="FeaturedStoryCard__container container">
         <div className="FeaturedStoryCard__content">
           <p className="FeaturedStoryCard__last-months">
@@ -38,8 +35,31 @@ const FeaturedStoryCardStoryCard = ({
           />
         </div>
       </div>
+    );
+  };
+
+  const value = !isMobile ? (
+    <div
+      className="FeaturedStoryCard"
+      style={{
+        backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
+      }}
+    >
+      {renderMainContent()}
+    </div>
+  ) : (
+    <div className="Mobile__container">
+      <div
+        className="FeaturedStoryCard"
+        style={{
+          backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
+        }}
+      ></div>
+      <div className="Mobile__content-wrapper">{renderMainContent()}</div>
     </div>
   );
+
+  return value;
 };
 
 export default FeaturedStoryCardStoryCard;

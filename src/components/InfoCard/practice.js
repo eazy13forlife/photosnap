@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect } from "react";
 
 import ArrowButton from "../ArrowButton/ArrowButton.js";
@@ -25,13 +26,35 @@ const InfoCard = ({
     }
   }, []);
 
-  const renderMainContent = () => {
-    return (
-      <div
-        className={`${
-          !hasBorder ? "InfoCard--no-border" : "InfoCard"
-        } InfoCard--${theme} ${!hasBorder ? className : null}`}
-      >
+  const renderParentBorderClass = () => {
+    if (!hasBorder) {
+      return "InfoCard--no-border";
+    }
+
+    if (isMobile) {
+      return "parent-top-border";
+    } else {
+      return "parent-left-border";
+    }
+  };
+
+  const renderContainerBorderClass = () => {
+    if (!hasBorder) {
+      return "";
+    }
+
+    if (isMobile) {
+      return "top-border-container";
+    } else {
+      return "left-border-container";
+    }
+  };
+
+  return (
+    <div
+      className={`InfoCard InfoCard--${theme} ${className} ${renderParentBorderClass()} `}
+    >
+      <div className={`${renderContainerBorderClass()}`}>
         <div className="InfoCard__content">
           <h2 className="InfoCard__heading">{heading}</h2>
           <p className="body-text">{text}</p>
@@ -45,24 +68,9 @@ const InfoCard = ({
           ) : null}
         </div>
       </div>
-    );
-  };
-
-  if (!hasBorder) {
-    return renderMainContent();
-  } else {
-    return (
-      <ContentBorder
-        side={!isMobile ? "left" : "top"}
-        horizontalPadding={isMobile ? "2" : "8"}
-        verticalPadding={isMobile ? "10" : "10"}
-        bgColor="black"
-        className={className}
-      >
-        {renderMainContent()}
-      </ContentBorder>
-    );
-  }
+    </div>
+  );
 };
 
 export default InfoCard;
+*/

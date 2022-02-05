@@ -1,3 +1,5 @@
+@use "../../styles/abstracts";
+
 .FeaturedStoryCard {
   padding: 10rem 5rem;
   background-size: cover;
@@ -21,6 +23,15 @@
     position: relative;
     z-index: 3;
     width: 45%;
+    @include abstracts.respondMax(abstracts.$desktop-small) {
+      width: 75%;
+    }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      width: 100%;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      color: white;
+    }
     & > * + * {
       margin-top: 2rem;
     }
@@ -52,4 +63,11 @@
   &__text {
     color: rgba(var(--color-light), 0.5);
   }
+}
+
+.Mobile__container .FeaturedStoryCard {
+  height: 35rem;
+}
+.Mobile__content-wrapper {
+  padding: 5rem 0rem;
 }

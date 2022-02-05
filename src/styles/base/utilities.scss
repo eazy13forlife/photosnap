@@ -5,6 +5,9 @@
   padding: 0rem 5rem;
   margin: 0 auto;
   height: 100%;
+  @include abstracts.respondMax(abstracts.$tablet-small) {
+    padding: 0rem 3rem;
+  }
   @include abstracts.respondMax(abstracts.$mobile) {
     padding: 0rem 2rem;
   }
