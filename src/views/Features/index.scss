@@ -3,14 +3,24 @@
 .Features {
   &__hero {
     display: flex;
+    height: 49rem;
     .InfoCard {
       position: relative;
-      flex: 1 0 54rem;
-    }
-    &-image-container {
-      flex: 1 0 0;
+      flex: 0 0 60rem;
     }
   }
+  &__hero-image-container {
+    background-image: url("../../images/features/desktop/hero.jpg");
+    background-position: left;
+    background-size: cover;
+    @include abstracts.respondMax(1000px) {
+      background-size: cover;
+      background-position: -15rem;
+    }
+
+    flex: 1 0 0;
+  }
+
   &__features {
     padding: 10rem 0rem;
   }

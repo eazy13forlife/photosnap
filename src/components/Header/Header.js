@@ -16,28 +16,41 @@ const Header = () => {
             className="Header__logo"
           />
         </figure>
-        <nav className="Header__nav">
-          <ul className="Header__nav-list">
-            <li className="Header__nav-item">
-              <Link to="/stories" className="Header__nav-link">
-                Stories
-              </Link>
-            </li>
-            <li className="Header__nav-item">
-              <Link to="/features" className="Header__nav-link">
-                Features
-              </Link>
-            </li>
-            <li className="Header__nav-item">
-              <Link to="/pricing" className="Header__nav-link">
-                Pricing
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <Link className="Header__button primary-button primary-button--dark">
-          Get an invite
-        </Link>
+        <div className="Header__mobile">
+          <input
+            type="checkbox"
+            name="toggleNav"
+            className="Header__checkbox"
+            id="mobile_checkbox"
+          />
+          <label className="Header__mobile-button" htmlFor="mobile_checkbox">
+            <span className="Header__mobile-lines"></span>
+          </label>
+          <div className="Header__mobile-container">
+            <nav className="Header__nav">
+              <ul className="Header__nav-list">
+                <li className="Header__nav-item">
+                  <Link to="/stories" className="Header__nav-link">
+                    Stories
+                  </Link>
+                </li>
+                <li className="Header__nav-item">
+                  <Link to="/features" className="Header__nav-link">
+                    Features
+                  </Link>
+                </li>
+                <li className="Header__nav-item">
+                  <Link to="/pricing" className="Header__nav-link">
+                    Pricing
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <Link className="Header__button primary-button primary-button--dark">
+              Get an invite
+            </Link>
+          </div>
+        </div>
       </div>
     </header>
   );

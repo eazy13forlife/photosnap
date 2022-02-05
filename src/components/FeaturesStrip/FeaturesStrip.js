@@ -16,7 +16,14 @@ const FeaturesStrip = ({ feature, plans, setup }) => {
 
   const renderedPlans = plans.map((plan, index) => {
     if (setup) {
-      return <h3 className="FeaturesStrip__heading">{plan}</h3>;
+      return (
+        <h3
+          className="FeaturesStrip__heading"
+          aria-description={`${plan} column`}
+        >
+          {plan}
+        </h3>
+      );
     } else {
       return (
         <div className="FeaturesStrip__plan" key={index}>
@@ -29,9 +36,12 @@ const FeaturesStrip = ({ feature, plans, setup }) => {
                 src={check}
                 alt="check mark"
                 className="FeaturesStrip__icon"
+                aria-description={`${plan.type} has ${feature}.`}
               />
             </figure>
-          ) : null}
+          ) : (
+            <p className="sr-only">{`${plan.type} does not have ${feature}.`}</p>
+          )}
         </div>
       );
     }

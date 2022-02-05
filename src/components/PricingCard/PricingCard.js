@@ -16,7 +16,7 @@ const PricingCard = ({ theme, header, text, priceAndLength, highlight }) => {
       <p className="body-text">{text}</p>
       <div className="PricingCard__price-per">
         <p className="PricingCard__price">{`$${price}`}</p>
-        <span className="body-text">{`per ${length}`}</span>
+        <p className="body-text">{`per ${length}`}</p>
       </div>
       <button
         className={`primary-button ${

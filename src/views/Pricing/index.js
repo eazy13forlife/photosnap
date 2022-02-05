@@ -111,7 +111,11 @@ const Pricing = () => {
             <h2 className="Pricing__compare-heading section-heading">
               Compare
             </h2>
-            <div className="Pricing__compare-table">
+            <div
+              className="Pricing__compare-table"
+              aria-label="features"
+              aria-description="Compare the features available for all our different plans"
+            >
               <FeaturesStrip
                 feature="The Features"
                 setup={true}
@@ -228,4 +232,66 @@ export default Pricing;
                   </div>
                 </div>
               </div>
+
+
+            
+        <table role="table" className="">
+          <tr>
+            <th scope="col" role="columnheade">
+              The Features
+            </th>
+            <th scope="col">Basic</th>
+            <th scope="col">Pro</th>
+            <th scope="col">Business</th>
+          </tr>
+          <tr>
+            <th>Unlimited Story Posting</th>
+            <td>yes</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Unlimited Photo Upload</th>
+            <td>yes</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Embedded Custom Content</th>
+            <td>no</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Customized Metadata</th>
+            <td>no</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Advanced metrics</th>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Photo downloads</th>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Search Engine Indexing</th>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <th>Custom Analystics</th>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+          </tr>
+  </table>
+        
             */
