@@ -4,6 +4,12 @@
   background-color: rgba(var(--color-dark), 1);
   &__all {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    @include abstracts.respondMax(abstracts.$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include abstracts.respondMax(abstracts.$mobile-large) {
+      grid-template-columns: 1fr;
+    }
   }
 }
