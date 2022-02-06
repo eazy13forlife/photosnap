@@ -40,21 +40,29 @@ const FeaturedStoryCardStoryCard = ({
 
   const value = !isMobile ? (
     <div
-      className="FeaturedStoryCard FeaturedStoryCard__image-container"
+      className="FeaturedStoryCard"
       style={{
         backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
       }}
     >
+      <figure className="FeaturedStoryCard__image-container">
+        <img
+          src={backgroundImage}
+          alt="image of something"
+          className="FeaturedStoryCard__image"
+        />
+      </figure>
       {renderMainContent()}
     </div>
   ) : (
     <div className="FeaturedStoryCard__mobile">
-      <div
-        className="FeaturedStoryCard__image-container"
-        style={{
-          backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
-        }}
-      ></div>
+      <figure className="FeaturedStoryCard__mobile-image-container">
+        <img
+          src={backgroundImage}
+          alt="image of something"
+          className="FeaturedStoryCard__image"
+        />
+      </figure>
       <div className="FeaturedStoryCard__mobile-content-wrapper">
         {renderMainContent()}
       </div>

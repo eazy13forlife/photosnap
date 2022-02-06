@@ -13,6 +13,7 @@ const Footer = () => {
         <figure className="Footer__logo-container">
           <Logo className="Footer__logo" />
         </figure>
+
         <nav className="Footer__nav">
           <ul className="Footer__nav-list">
             <li className="Footer__nav-item">
@@ -37,6 +38,7 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
+
         <div className="Footer__icons">
           <Link class="Footer__icon-link">
             <img
@@ -74,7 +76,9 @@ const Footer = () => {
             />
           </Link>
         </div>
+
         <ArrowButton text="get an invite" color="light" size="regular" />
+
         <p className="Footer__text">Copyright 2022. All rights reserved</p>
       </div>
     </footer>

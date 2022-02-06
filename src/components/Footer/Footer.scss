@@ -13,6 +13,12 @@
       grid-row-gap: 1.5rem;
       grid-column-gap: 3rem;
     }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-row-gap: 3rem;
+      justify-items: center;
+    }
   }
   &__logo-container {
     grid-column: 1/2;
@@ -31,6 +37,9 @@
       grid-row: 2/3;
       margin-left: 0rem;
     }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-row: 3/4;
+    }
   }
   &__nav-list {
     display: flex;
@@ -42,11 +51,24 @@
       flex-direction: row;
       justify-content: flex-start;
     }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      flex-direction: column;
+    }
   }
   &__nav-item {
     @include abstracts.respondMax(abstracts.$tablet) {
       &:not(:first-child) {
         margin-left: 2rem;
+      }
+    }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      text-align: center;
+      &:not(:first-child) {
+        margin-left: 0rem;
+        margin-top: 2rem;
+      }
+      &:last-child {
+        margin-bottom: 8rem;
       }
     }
   }
@@ -64,6 +86,11 @@
     @include abstracts.respondMax(abstracts.$tablet) {
       grid-column: 2/3;
     }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-column: 1/2;
+      grid-row: 5/6;
+      justify-self: center;
+    }
   }
   &__icons {
     grid-column: 1/2;
@@ -73,6 +100,10 @@
     @include abstracts.respondMax(abstracts.$tablet) {
       grid-column: 1/2;
       grid-row: 3/4;
+    }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-column: 1/2;
+      grid-row: 2/3;
     }
   }
   &__icon-link {
@@ -98,6 +129,12 @@
     @include abstracts.respondMax(abstracts.$tablet) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-column: 1/2;
+      grid-row: 6/7;
+      justify-self: center;
+      text-align: center;
     }
   }
 }
