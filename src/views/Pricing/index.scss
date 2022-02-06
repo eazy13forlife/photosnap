@@ -1,3 +1,5 @@
+@use "../../styles/abstracts";
+
 .Pricing {
   &__hero {
     display: flex;
@@ -28,6 +30,10 @@
     align-items: center;
     grid-column-gap: 2.5rem;
     grid-template-rows: auto;
+    @include abstracts.respondMax(abstracts.$tablet-large) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 5rem;
+    }
   }
   &__compare {
     padding: 10rem 0rem;
@@ -35,6 +41,9 @@
   &__compare-table {
     width: 70%;
     margin: 5rem auto;
+    @include abstracts.respondMax(abstracts.$tablet) {
+      width: 100%;
+    }
     .FeaturesStrip:first-child {
       border-bottom: 2px solid rgba(var(--color-dark), 1);
     }

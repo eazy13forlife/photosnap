@@ -16,16 +16,16 @@ const prices = {
     yearly: "year",
   },
   basic: {
-    monthly: 19,
-    yearly: 190,
+    monthly: "19.00",
+    yearly: "190.00",
   },
   pro: {
-    monthly: 39,
-    yearly: 390,
+    monthly: "39.00",
+    yearly: "390.00",
   },
   business: {
-    monthly: 99,
-    yearly: 990,
+    monthly: "99.00",
+    yearly: "990.000",
   },
 };
 const Pricing = () => {
