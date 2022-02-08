@@ -5,7 +5,7 @@ import "./Beta.scss";
 
 const Beta = () => {
   return (
-    <div className="Beta">
+    <section className="Beta">
       <div className="Beta__container container">
         <h2 className="Beta__header">
           We&apos;re in beta. Get your invite today!
@@ -17,7 +17,7 @@ const Beta = () => {
           link=""
         />
       </div>
-    </div>
+    </section>
   );
 };
 

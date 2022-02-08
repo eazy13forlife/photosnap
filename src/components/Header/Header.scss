@@ -58,7 +58,7 @@
   &__mobile-height {
     @include abstracts.respondMax(abstracts.$tablet) {
       position: absolute;
-      z-index: 3;
+      z-index: 5;
       top: 100%;
       left: 0;
       width: 100%;
