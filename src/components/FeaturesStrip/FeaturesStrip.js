@@ -20,6 +20,7 @@ const FeaturesStrip = ({ feature, plans, setup }) => {
         <h3
           className="FeaturesStrip__heading"
           aria-description={`${plan} column`}
+          key={index}
         >
           {plan}
         </h3>

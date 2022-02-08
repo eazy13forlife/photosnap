@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
+import history from "../../history.js";
 import images from "../../images";
 import { ReactComponent as PhotosnapLogo } from "../../images/shared/desktop/logo.svg";
 
@@ -22,7 +24,12 @@ const Header = () => {
   return (
     <header className="Header">
       <div className="Header__container container">
-        <figure className="Header__logo-container">
+        <figure
+          className="Header__logo-container"
+          onClick={() => {
+            history.push("/");
+          }}
+        >
           <img
             src={images.logoSharedDesktopSvg}
             alt=""
@@ -71,7 +78,10 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
-              <Link className="Header__button primary-button primary-button--dark">
+              <Link
+                to=""
+                className="Header__button primary-button primary-button--dark"
+              >
                 Get an invite
               </Link>
             </div>

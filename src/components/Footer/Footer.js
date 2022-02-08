@@ -17,7 +17,7 @@ const Footer = () => {
         <nav className="Footer__nav">
           <ul className="Footer__nav-list">
             <li className="Footer__nav-item">
-              <Link to="/home" className="Footer__nav-link">
+              <Link to="/" className="Footer__nav-link">
                 Home
               </Link>
             </li>
@@ -40,35 +40,35 @@ const Footer = () => {
         </nav>
 
         <div className="Footer__icons">
-          <Link class="Footer__icon-link">
+          <Link to="" className="Footer__icon-link">
             <img
               src={images.facebookSharedDesktopSvg}
               alt=""
               className="Footer__icon"
             />
           </Link>
-          <Link class="Footer__icon-link">
+          <Link to="" className="Footer__icon-link">
             <img
               src={images.youtubeSharedDesktopSvg}
               alt=""
               className="Footer__icon"
             />
           </Link>
-          <Link class="Footer__icon-link">
+          <Link to="" className="Footer__icon-link">
             <img
               src={images.twitterSharedDesktopSvg}
               alt=""
               className="Footer__icon"
             />
           </Link>
-          <Link class="Footer__icon-link">
+          <Link to="" className="Footer__icon-link">
             <img
               src={images.pinterestSharedDesktopSvg}
               alt=""
               className="Footer__icon"
             />
           </Link>
-          <Link class="Footer__icon-link">
+          <Link to="" className="Footer__icon-link">
             <img
               src={images.instagramSharedDesktopSvg}
               alt=""
@@ -77,7 +77,12 @@ const Footer = () => {
           </Link>
         </div>
 
-        <ArrowButton text="get an invite" color="light" size="regular" />
+        <ArrowButton
+          text="get an invite"
+          color="light"
+          size="regular"
+          link=""
+        />
 
         <p className="Footer__text">Copyright 2022. All rights reserved</p>
       </div>

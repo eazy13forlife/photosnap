@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "./history.js";
 import Home from "./views/Home";
 import Features from "./views/Features";
 import Pricing from "./views/Pricing";
@@ -9,7 +10,7 @@ import "./images/";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Route path="/" exact>
         <Home />
       </Route>
@@ -22,7 +23,7 @@ const App = () => {
       <Route path="/stories" exact>
         <Stories />
       </Route>
-    </BrowserRouter>
+    </Router>
   );
 };
 
