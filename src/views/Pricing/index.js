@@ -39,10 +39,9 @@ const Pricing = () => {
     <div className="Pricing">
       <Header />
       <main className="Pricing__main">
-        <section className="Pricing__hero">
+        <section className="Pricing__hero hero-grid">
           <InfoCard
             theme="dark"
-            className="Features__pricing"
             heading="Pricing"
             text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. it's the simple way to create and share your photos."
             hasBorder={true}

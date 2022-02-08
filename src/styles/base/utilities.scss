@@ -1,5 +1,6 @@
 @use "../abstracts";
 
+//general container to place content in for each section
 .container {
   max-width: 105rem;
   padding: 0rem 5rem;
@@ -12,6 +13,8 @@
     padding: 0rem 2rem;
   }
 }
+
+//creates a grid layout to put our features in
 .features__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -20,39 +23,37 @@
   justify-items: center;
 }
 
-//parent div that holds our .child-top-border div
-.parent-top-border {
-  padding: 0rem 8rem;
-}
-
-//create empty outer div around main content and add this class to add a border to very top of section
-.top-border-container {
-  padding: 10rem 0rem;
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &::after {
-    @include abstracts.borderHorizontal(100%);
+//formats our hero if its a grid with an infocard and image
+.hero-grid {
+  display: grid;
+  grid-template-columns: 55rem 1fr;
+  @include abstracts.respondMax(abstracts.$tablet-large) {
+    grid-template-columns: 50rem 1fr;
   }
-}
-//parent div that holds our .child-left-border div
-.parent-left-border {
-  display: flex;
-  align-items: center;
-  padding: 10rem 0rem;
-}
-
-//create empty outer div around main content and add this class to add a border to very left of section
-.left-border-container {
-  padding: 0rem 8rem;
-  position: relative;
-  &::after {
-    @include abstracts.borderVertical(100%);
+  @include abstracts.respondMax(abstracts.$tablet-small) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  & > *:first-child {
+    grid-column: 1/2;
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
+  img {
+    grid-column: 2/3;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
   }
 }
 
+//screen reader only
 .sr-only {
   position: absolute;
   width: 1px;

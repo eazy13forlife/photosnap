@@ -23,7 +23,7 @@
     }
     &:checked ~ .Header__mobile-height .Header__mobile-container {
       opacity: 1;
-      transition: opacity 950ms ease-in;
+      transition: opacity 700ms ease-in 500ms;
     }
   }
   &__mobile-button {

@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="Home">
       <Header />
-      <section className="Home__create-and-share">
+      <section className="hero-grid">
         <InfoCard
           className="InfoCard__create-and-share"
           theme="dark"

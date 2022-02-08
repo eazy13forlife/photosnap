@@ -7,25 +7,25 @@
   padding: 7rem 0rem;
   color: rgba(var(--color-light), 1);
   &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 5px;
-    background-image: var(--color-accent);
+    @include abstracts.borderVertical(100%) {
+      display: block;
+    }
+    @include abstracts.respondMax(abstracts.$mobile) {
+      display: none;
+    }
   }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      width: 30rem;
-      height: 5px;
-      background-image: var(--color-accent);
+      @include abstracts.borderHorizontal(40vw) {
+        display: none;
+        left: auto;
+      }
+      @include abstracts.respondMax(abstracts.$mobile) {
+        display: block;
+      }
     }
     @include abstracts.respondMax(730px) {
       flex-direction: column;

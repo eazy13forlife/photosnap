@@ -33,6 +33,7 @@ $mobile: 375px;
   width: $width;
   height: 8px;
   background-image: var(--color-accent);
+  @content;
 }
 
 @mixin borderVertical($height) {
@@ -51,4 +52,5 @@ $mobile: 375px;
   width: 8px;
   height: $height;
   background-image: var(--color-accent);
+  @content;
 }

@@ -14,23 +14,30 @@ const InfoCard = ({
   buttonLink,
   hasBorder,
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.outerWidth <= 368);
 
   useEffect(() => {
-    //from the onset, check users screen width, so we know if mobile or not
-    if (window.outerWidth <= 368) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    const resize = (e) => {
+      if (e.target.outerWidth <= 368) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
   }, []);
 
-  const renderMainContent = () => {
+  const renderMain = () => {
     return (
       <div
-        className={`${
-          !hasBorder ? "InfoCard--no-border" : "InfoCard"
-        } InfoCard--${theme} ${!hasBorder ? className : null}`}
+        className={`InfoCard--${theme} ${
+          !hasBorder ? `InfoCard--no-border ${className}` : null
+        }`}
       >
         <div className="InfoCard__content">
           <h2 className="InfoCard__heading">{heading}</h2>
@@ -49,17 +56,17 @@ const InfoCard = ({
   };
 
   if (!hasBorder) {
-    return renderMainContent();
+    return renderMain();
   } else {
     return (
       <ContentBorder
         side={!isMobile ? "left" : "top"}
         horizontalPadding={isMobile ? "2" : "8"}
-        verticalPadding={isMobile ? "10" : "10"}
+        verticalPadding={isMobile ? "7.5" : "10"}
         bgColor="black"
         className={className}
       >
-        {renderMainContent()}
+        {renderMain()}
       </ContentBorder>
     );
   }

@@ -24,6 +24,7 @@
     @include abstracts.respondMax(abstracts.$mobile) {
       margin-top: 1.5rem;
       justify-items: start;
+      align-items: start;
     }
   }
   &__plan-name {
@@ -32,6 +33,8 @@
     font-weight: 500;
     letter-spacing: 1.67px;
     color: rgba(var(--color-dark), 0.5);
+    @include abstracts.respondMax(abstracts.$mobile) {
+    }
   }
   &__image-container {
     margin-top: 0.5rem;

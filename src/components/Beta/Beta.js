@@ -8,7 +8,7 @@ const Beta = () => {
     <div className="Beta">
       <div className="Beta__container container">
         <h2 className="Beta__header">
-          We&quot;re in beta. Get your invite today!
+          We&apos;re in beta. Get your invite today!
         </h2>
         <ArrowButton
           text="Get an invite"

@@ -48,9 +48,9 @@ const ContentBorder = ({
 
   return (
     <div
-      className={` ${
+      className={`${
         className ? className : ""
-      } ContentBorder ContentBorder--${renderDirectionClass()} `}
+      } ContentBorder ContentBorder--${renderDirectionClass()}`}
       style={renderParentPadding()}
     >
       <div

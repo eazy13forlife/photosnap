@@ -14,7 +14,7 @@ const Features = () => {
     <div className="Features">
       <Header />
       <main className="Features__main">
-        <div className="Features__hero">
+        <section className="Features__hero hero-grid">
           <InfoCard
             className="Features__InfoCard"
             theme="dark"
@@ -22,9 +22,13 @@ const Features = () => {
             text="We make sure all of our features are designed to be loved by every aspiring and even professional photographers who wanted to share their stories."
             hasBorder={true}
           />
-          <figure className="Features__hero-image-container"></figure>
-        </div>
-        <div className="Features__features">
+          <img
+            src={images.heroFeaturesDesktopJpg}
+            className="Image__create-and-share"
+          />
+        </section>
+
+        <section className="Features__features">
           <div className="features__grid container">
             <FeatureCard
               image={images.responsiveFeaturesDesktopSvg}
@@ -57,7 +61,8 @@ const Features = () => {
               text=""
             />
           </div>
-        </div>
+        </section>
+
         <section className="Features__beta">
           <Beta />
         </section>
