@@ -39,20 +39,28 @@ const Pricing = () => {
     <div className="Pricing">
       <Header />
       <main className="Pricing__main">
-        <section className="Pricing__hero hero-grid">
+        <section className="Pricing__hero two-grid">
           <InfoCard
+            className="two-grid__content"
             theme="dark"
             heading="Pricing"
             text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. it's the simple way to create and share your photos."
             hasBorder={true}
           />
-          <figure className="Pricing__hero-image-container">
+          <picture>
+            <source
+              media="(max-width:40.625em)"
+              srcSet={images.heroPricingMobileJpg}
+            />
+            <source
+              media="(max-width:50em)"
+              srcSet={images.heroPricingTabletJpg}
+            />
             <img
               src={images.heroPricingDesktopJpg}
-              alt="Man taking a picture"
-              className="Pricing__hero-image"
+              alt="man looking out at mountains with a camera in his hand"
             />
-          </figure>
+          </picture>
         </section>
 
         <section className="Pricing__prices">

@@ -7,9 +7,10 @@ import "./StoryCard.scss";
 const StoryCard = ({ date, title, author, image }) => {
   return (
     <div className="StoryCard">
-      <figure className="StoryCard__image-container">
-        <img src={image} className="StoryCard__image" />
-      </figure>
+      <picture className="StoryCard__image-container">
+        <source media="(max-width:23.44em)" srcSet={image.mobile} />
+        <img src={image.desktop} className="StoryCard__image" />
+      </picture>
       <div className="StoryCard__content">
         <p className="StoryCard__date">{date}</p>
         <header className="StoryCard__header">

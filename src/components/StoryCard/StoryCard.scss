@@ -14,8 +14,17 @@
     opacity: 0;
     transition: opacity 400ms, top 400ms;
   }
+  &:hover {
+    transform: translatey(-2rem);
+    &::before {
+      top: 100%;
+      opacity: 1;
+      transition: top 0ms;
+    }
+  }
   &__image-container {
     position: relative;
+    display: block;
     &::after {
       content: "";
       width: 100%;
@@ -29,14 +38,6 @@
   }
   &__image {
     width: 100%;
-  }
-  &:hover {
-    transform: translatey(-2rem);
-    &::before {
-      top: 100%;
-      opacity: 1;
-      transition: top 0ms;
-    }
   }
   &__content {
     background-color: none;
@@ -71,3 +72,10 @@
     margin-top: 1.5rem;
   }
 }
+
+/*
+     <picture className="StoryCard__image-container">
+        <source media="(max-width:23.44em)" srcSet={image.mobile} />
+        <img src={image.desktop} className="StoryCard__image" />
+      </picture>
+      */

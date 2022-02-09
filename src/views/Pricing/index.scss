@@ -3,6 +3,9 @@
 .Pricing {
   &__hero {
     height: 49rem;
+    @include abstracts.respondMax(abstracts.$tablet-really-small) {
+      height: auto;
+    }
   }
 
   &__container {

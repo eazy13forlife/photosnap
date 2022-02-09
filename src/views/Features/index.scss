@@ -3,6 +3,9 @@
 .Features {
   &__hero {
     height: 49rem;
+    @include abstracts.respondMax(abstracts.$tablet-really-small) {
+      height: auto;
+    }
   }
   &__features {
     padding: 10rem 0rem;

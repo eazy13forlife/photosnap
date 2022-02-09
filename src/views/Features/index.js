@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "../../components/Header/Header.js";
 import InfoCard from "../../components/InfoCard/InfoCard.js";
@@ -10,22 +10,52 @@ import images from "../../images/";
 import "./index.scss";
 
 const Features = () => {
+  const [isMobile, setIsMobile] = useState(window.outerWidth <= 450);
+
+  useEffect(() => {
+    const resize = (e) => {
+      console.log("hey");
+      if (e.target.outerWidth <= 450) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
   return (
     <div className="Features">
       <Header />
       <main className="Features__main">
-        <section className="Features__hero hero-grid">
+        <section className="Features__hero two-grid">
           <InfoCard
-            className="Features__InfoCard"
+            className="two-grid__content"
             theme="dark"
             heading="features"
             text="We make sure all of our features are designed to be loved by every aspiring and even professional photographers who wanted to share their stories."
             hasBorder={true}
+            isMobile={isMobile}
           />
-          <img
-            src={images.heroFeaturesDesktopJpg}
-            className="Image__create-and-share"
-          />
+          <picture>
+            <source
+              media="(max-width:40.625em)"
+              srcSet={images.heroFeaturesMobileJpg}
+            />
+            <source
+              media="(max-width:50em)"
+              srcSet={images.heroFeaturesTabletJpg}
+            />
+            <img
+              src={images.heroFeaturesDesktopJpg}
+              alt="man looking out at mountains with a camera in his hand"
+            />
+          </picture>
         </section>
 
         <section className="Features__features">

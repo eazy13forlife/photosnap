@@ -4,10 +4,10 @@ import check from "../../images/pricing/desktop/check.svg";
 import "./FeaturesStrip.scss";
 
 const FeaturesStrip = ({ feature, plans, setup }) => {
-  const [showPlanNames, setShowPlanNames] = useState(false);
+  const [showPlanNames, setShowPlanNames] = useState(window.innerWidth <= 450);
 
   useEffect(() => {
-    if (window.innerWidth <= 368) {
+    if (window.innerWidth <= 450) {
       setShowPlanNames(true);
     } else {
       setShowPlanNames(false);

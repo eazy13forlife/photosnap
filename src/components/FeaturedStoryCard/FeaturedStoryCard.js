@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import ArrowButton from "../../components/ArrowButton/ArrowButton.js";
 import "./FeaturedStoryCard.scss";
 
-const FeaturedStoryCardStoryCard = ({
+const FeaturedStoryCard = ({
   heading,
   date,
   author,
   text,
   backgroundImage,
+  isMobile,
 }) => {
-  const [isMobile, setIsMobile] = useState(window.outerWidth <= 368);
-
   const renderMainContent = () => {
     return (
       <div className="FeaturedStoryCard__container container">
@@ -39,27 +38,22 @@ const FeaturedStoryCardStoryCard = ({
   };
 
   const value = !isMobile ? (
-    <div
-      className="FeaturedStoryCard"
-      style={{
-        backgroundImage: `url(${backgroundImage}),linear-gradient(to right,black, grey)`,
-      }}
-    >
-      <figure className="FeaturedStoryCard__image-container">
+    <div className="FeaturedStoryCard">
+      <picture className="FeaturedStoryCard__image-container">
+        <source media="(min-width:48em)" srcSet={backgroundImage.desktop} />
+        <source media="(min-width:23.44em)" srcSet={backgroundImage.tablet} />
         <img
-          src={backgroundImage}
-          alt="image of something"
+          src={backgroundImage.desktop}
           className="FeaturedStoryCard__image"
         />
-      </figure>
+      </picture>
       {renderMainContent()}
     </div>
   ) : (
     <div className="FeaturedStoryCard__mobile">
       <figure className="FeaturedStoryCard__mobile-image-container">
         <img
-          src={backgroundImage}
-          alt="image of something"
+          src={backgroundImage.mobile}
           className="FeaturedStoryCard__image"
         />
       </figure>
@@ -72,4 +66,4 @@ const FeaturedStoryCardStoryCard = ({
   return value;
 };
 
-export default FeaturedStoryCardStoryCard;
+export default FeaturedStoryCard;

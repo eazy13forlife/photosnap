@@ -13,25 +13,8 @@ const InfoCard = ({
   buttonText,
   buttonLink,
   hasBorder,
+  isMobile,
 }) => {
-  const [isMobile, setIsMobile] = useState(window.outerWidth <= 368);
-
-  useEffect(() => {
-    const resize = (e) => {
-      if (e.target.outerWidth <= 368) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    window.addEventListener("resize", resize);
-
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
   const renderMain = () => {
     return (
       <div

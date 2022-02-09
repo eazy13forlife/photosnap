@@ -23,35 +23,70 @@
   justify-items: center;
 }
 
+//formats a grid with an infocard and image
+.two-grid {
+  display: flex;
+  @include abstracts.respondMax(abstracts.$tablet-really-small) {
+    flex-direction: column;
+  }
+  &__content {
+    flex: 0 0 55rem;
+    @include abstracts.respondMax(abstracts.$tablet-large) {
+      flex: 0 0 50rem;
+    }
+    @include abstracts.respondMax(abstracts.$tablet-small) {
+      flex: 0 0 45rem;
+    }
+  }
+  picture {
+    flex: 1 0 0;
+    @include abstracts.respondMax(abstracts.$tablet-really-small) {
+      order: -1;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/*
 //formats our hero if its a grid with an infocard and image
-.hero-grid {
+.two-grid {
   display: grid;
   grid-template-columns: 55rem 1fr;
   @include abstracts.respondMax(abstracts.$tablet-large) {
     grid-template-columns: 50rem 1fr;
   }
+
   @include abstracts.respondMax(abstracts.$tablet-small) {
+    grid-template-columns: 45rem 1fr;
+  }
+  @include abstracts.respondMax(abstracts.$tablet-really-small) {
     grid-template-columns: 1fr;
     height: auto;
   }
-  & > *:first-child {
+  &__left {
     grid-column: 1/2;
-    @include abstracts.respondMax(abstracts.$tablet-small) {
+    @include abstracts.respondMax(abstracts.$tablet-really-small) {
       grid-column: 1/2;
       grid-row: 3/4;
     }
   }
-  img {
+  picture {
     grid-column: 2/3;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    @include abstracts.respondMax(abstracts.$tablet-small) {
+    @include abstracts.respondMax(abstracts.$tablet-really-small) {
       grid-column: 1/2;
       grid-row: 2/3;
     }
   }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
 }
+*/
 
 //screen reader only
 .sr-only {
