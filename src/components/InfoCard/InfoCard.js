@@ -23,7 +23,11 @@ const InfoCard = ({
         }`}
       >
         <div className="InfoCard__content">
-          <h2 className="InfoCard__heading">{heading}</h2>
+          {hasBorder ? (
+            <h1 className="InfoCard__heading">{heading}</h1>
+          ) : (
+            <h2 className="InfoCard__heading">{heading}</h2>
+          )}
           <p className="body-text">{text}</p>
           {buttonText ? (
             <ArrowButton

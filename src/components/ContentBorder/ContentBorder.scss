@@ -15,7 +15,7 @@
       flex-direction: column;
       justify-content: center;
       &::after {
-        @include abstracts.borderHorizontal(45%);
+        @include abstracts.borderHorizontal(top, left, 45%);
       }
     }
     &--vertical {
@@ -25,7 +25,7 @@
       flex-direction: column;
       justify-content: center;
       &::after {
-        @include abstracts.borderVertical(100%);
+        @include abstracts.borderVertical(top, left, 100%);
       }
     }
   }

@@ -36,12 +36,12 @@
       padding: 4rem 2rem;
     }
     &::after {
-      @include abstracts.borderHorizontal(100%);
+      @include abstracts.borderHorizontal(top, left, 100%);
       @include abstracts.respondMax(abstracts.$tablet-large) {
-        @include abstracts.borderVertical(100%);
+        @include abstracts.borderVertical(top, left, 100%);
       }
       @include abstracts.respondMax(600px) {
-        @include abstracts.borderHorizontal(100%);
+        @include abstracts.borderHorizontal(top, left, 100%);
       }
     }
   }
