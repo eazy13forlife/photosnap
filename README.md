@@ -15,7 +15,7 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 
 
 ## My Process
-Looking at a figma design file, I initially set up custom variables for colors, font size, font family,  created custom components used throughout the site like buttons (and their interactivity states) and any cards and studied the grid layout before I began coding.
+Looking at a figma design file, I initially set up custom variables for colors, font size, and font family. Then, I created custom components used throughout the site like buttons (and their interactivity states) and any cards. Finally, I studied the grid layout and positioning of elements before I began coding.
 
 
 
