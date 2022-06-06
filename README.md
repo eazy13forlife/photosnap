@@ -1,6 +1,6 @@
 # Photosnap Website solution
 
-This is a solution to the [Photosnap Website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW)
+This is a solution to the [Photosnap Website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW). It is a fully responsive, 4 page marketing website.
 
 ## Technologies
 
@@ -14,8 +14,8 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 * CSS Grid
 
 
-## Notable Features
-* Fully responsive
+## What I Learned
+Looking at a figma design file, I wanted to get all the styling in my css done first. This meant setting up custom variables for colors, font size, font family , and custom components used throughout the site like buttons (and their hover states) and any cards.
 
 
 
