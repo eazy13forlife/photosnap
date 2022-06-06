@@ -14,8 +14,8 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 * CSS Grid
 
 
-## What I Learned
-Looking at a figma design file, I wanted to get all the styling in my css done first. This meant setting up custom variables for colors, font size, font family , and custom components used throughout the site like buttons (and their hover states) and any cards.
+## My though process and goal
+Looking at a figma design file, I initially set up custom variables for colors, font size, font family,  created custom components used throughout the site like buttons (and their interactivity states) and any cards and studied the grid layout before I began coding.
 
 
 
