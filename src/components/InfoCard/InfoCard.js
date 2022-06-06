@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import ArrowButton from "../ArrowButton/ArrowButton.js";
 import ContentBorder from "../ContentBorder/ContentBorder.js";

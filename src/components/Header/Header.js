@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import history from "../../history.js";
 import images from "../../images";
-import { ReactComponent as PhotosnapLogo } from "../../images/shared/desktop/logo.svg";
-
 import "./Header.scss";
 
 const Header = () => {

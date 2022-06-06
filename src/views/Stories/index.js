@@ -5,7 +5,6 @@ import FeaturedStoryCard from "../../components/FeaturedStoryCard/FeaturedStoryC
 import StoryCard from "../../components/StoryCard/StoryCard.js";
 import Footer from "../../components/Footer/Footer.js";
 import images from "../../images";
-import ArrowButton from "../../components/ArrowButton/ArrowButton.js";
 import "./index.scss";
 
 const Stories = () => {

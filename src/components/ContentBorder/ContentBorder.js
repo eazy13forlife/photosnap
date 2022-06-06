@@ -9,7 +9,6 @@ const ContentBorder = ({
   side,
   children,
   bgColor,
-  bgImage,
 }) => {
   const isHorizontal = side === "top" || side === "bottom";
 
