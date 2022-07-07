@@ -14,7 +14,7 @@ const store = createStore(
   combinedReducers,
   composeEnhancers(applyMiddleware(ReduxThunk))
 );
-
+const dog = "yes";
 ReactDOM.render(
   <Provider store={store}>
     <App />
