@@ -1,5 +1,4 @@
 # Photosnap Website
-
 This is a solution to the [Photosnap Website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW). It is a fully responsive, 4 page marketing website.
 
 ## Live Url
